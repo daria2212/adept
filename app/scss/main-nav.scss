@@ -1,0 +1,203 @@
+.main-nav {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: $main-blue;
+  border-radius: 20px;
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+    margin: 0 15px;
+    animation: slideInDown 0.7s;
+  }
+
+  &--no-js {
+    display: block;
+    position: static;
+  }
+}
+
+.main-nav__list {
+  @include reset-style;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.main-nav__item {
+    width: 50%;
+    &--main,
+    &--about,
+    &--reviews {
+        padding-right: 30px;
+        text-align: right;
+        border-right: 1px solid #f3b701;
+    }
+    &--menu,
+    &--gallery,
+    &--contacts {
+        padding-left: 30px;
+    }
+    &--main,
+    &--menu {
+        padding-top: 17px;
+    }
+    &--reviews,
+    &--contacts {
+        padding-bottom: 14px;
+    }
+}
+
+.main-nav__link {
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.main-nav__btn {
+  max-width: 175px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.toggle {
+  font-size: 0;
+}
+
+.toggle--opened {
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.toggle--opened {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 2px;
+    height: 25px;
+    background-color: #ffffff;
+  }
+}
+
+.toggle--opened::before {
+  transform: rotate(45deg);
+}
+
+.toggle--opened::after {
+  transform: rotate(-45deg);
+}
+
+.toggle--closed {
+  width: 30px;
+  height: 30px;
+  font-size: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+}
+
+.toggle--closed::before {
+  position: absolute;
+  content: "";
+  top: 35px;
+  left: 20px;
+  width: 28px;
+  height: 20px;
+  background-image: url(../images/menu-btn.svg);
+  background-repeat: no-repeat;
+  transform: rotate(-2deg);
+}
+
+.toggle--no-js {
+  display: none;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .toggle {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    top: 0;
+    background-color: transparent;
+    min-height: 0px;
+    &--closed {
+      display: block;
+    }
+  }
+  
+  .main-nav__item {
+      width: auto;
+      &--main,
+      &--about,
+      &--reviews {
+          padding-right: 0px;
+          text-align: left;
+          border-right: none;
+      }
+      &--menu,
+      &--gallery,
+      &--contacts {
+          padding-left: 0px;
+      }
+      &--main,
+      &--menu {
+          padding-top: 0px;
+      }
+      &--reviews,
+      &--contacts {
+          padding-bottom: 0px;
+      }
+  }
+
+  .main-nav__btn {
+    display: none;
+  }
+
+  .main-nav__link {
+    padding: 5px 10px;
+    color: #96c7d6;
+    text-decoration: none;
+    -webkit-text-stroke: 0.5px #000000;
+    &:active {
+        text-decoration: underline;
+    }
+  }
+}
+@media (min-width: $desktop-width) {
+    .main-nav__item {
+        margin-right: 35px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    
+}
