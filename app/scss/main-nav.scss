@@ -32,27 +32,27 @@
 }
 
 .main-nav__item {
-    width: 50%;
-    &--main,
-    &--about,
-    &--reviews {
-        padding-right: 30px;
-        text-align: right;
-        border-right: 1px solid #f3b701;
-    }
-    &--menu,
-    &--gallery,
-    &--contacts {
-        padding-left: 30px;
-    }
-    &--main,
-    &--menu {
-        padding-top: 17px;
-    }
-    &--reviews,
-    &--contacts {
-        padding-bottom: 14px;
-    }
+  width: 50%;
+  &--main,
+  &--about,
+  &--reviews {
+    padding-right: 30px;
+    text-align: right;
+    border-right: 1px solid #f3b701;
+  }
+  &--menu,
+  &--gallery,
+  &--contacts {
+    padding-left: 30px;
+  }
+  &--main,
+  &--menu {
+    padding-top: 17px;
+  }
+  &--reviews,
+  &--contacts {
+    padding-bottom: 14px;
+  }
 }
 
 .main-nav__link {
@@ -74,7 +74,8 @@
 }
 
 .toggle--opened {
-  width: 30px;
+  padding: 0;
+  width: 28px;
   height: 30px;
   font-size: 0;
   border: 0;
@@ -88,40 +89,46 @@
     content: "";
     position: absolute;
     top: 30px;
-    left: 30px;
+    left: 28px;
     width: 2px;
-    height: 25px;
+    height: 28px;
     background-color: #ffffff;
+  }
+  &:before {
+    transform: rotate(-45deg);
+  }
+  &:after {
+    transform: rotate(45deg);
   }
 }
 
-.toggle--opened::before {
-  transform: rotate(45deg);
-}
-
-.toggle--opened::after {
-  transform: rotate(-45deg);
-}
-
 .toggle--closed {
-  width: 30px;
-  height: 30px;
+  position: relative;
+  top: 16px;
+  padding: 0;
+  width: 28px;
+  height: 1.5px;
   font-size: 0;
   border: 0;
   outline: 0;
-  background-color: transparent;
-}
-
-.toggle--closed::before {
-  position: absolute;
-  content: "";
-  top: 35px;
-  left: 20px;
-  width: 28px;
-  height: 20px;
-  background-image: url(../images/menu-btn.svg);
-  background-repeat: no-repeat;
-  transform: rotate(-2deg);
+  background-color: #ffff;
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    height: inherit;
+    background-color: inherit;
+    transition: all ease 0.3s;
+  }
+  &:before {
+    top: -7px;
+    width: 25px;
+  }
+  &:after {
+    top: 7px;
+    width: 20px;
+  }
 }
 
 .toggle--no-js {
@@ -153,29 +160,29 @@
       display: block;
     }
   }
-  
+
   .main-nav__item {
-      width: auto;
-      &--main,
-      &--about,
-      &--reviews {
-          padding-right: 0px;
-          text-align: left;
-          border-right: none;
-      }
-      &--menu,
-      &--gallery,
-      &--contacts {
-          padding-left: 0px;
-      }
-      &--main,
-      &--menu {
-          padding-top: 0px;
-      }
-      &--reviews,
-      &--contacts {
-          padding-bottom: 0px;
-      }
+    width: auto;
+    &--main,
+    &--about,
+    &--reviews {
+      padding-right: 0px;
+      text-align: left;
+      border-right: none;
+    }
+    &--menu,
+    &--gallery,
+    &--contacts {
+      padding-left: 0px;
+    }
+    &--main,
+    &--menu {
+      padding-top: 0px;
+    }
+    &--reviews,
+    &--contacts {
+      padding-bottom: 0px;
+    }
   }
 
   .main-nav__btn {
@@ -188,16 +195,15 @@
     text-decoration: none;
     -webkit-text-stroke: 0.5px #000000;
     &:active {
-        text-decoration: underline;
+      text-decoration: underline;
     }
   }
 }
 @media (min-width: $desktop-width) {
-    .main-nav__item {
-        margin-right: 35px;
-        &:last-child {
-            margin-right: 0;
-        }
+  .main-nav__item {
+    margin-right: 35px;
+    &:last-child {
+      margin-right: 0;
     }
-    
+  }
 }

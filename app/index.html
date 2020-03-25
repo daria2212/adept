@@ -14,7 +14,21 @@
 
 <body>
 
+    <svg style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="ruble-white" viewbox="0 0 512 512">
+            <path
+                d="M288.134 319.2c88.291 0 159.6-71.458 159.6-159.6 0-88.004-71.596-159.6-159.6-159.6H127.467c-8.284 0-15 6.716-15 15v209.933h-33.2c-8.284 0-15 6.716-15 15V304.2c0 8.284 6.716 15 15 15h33.2v34.267h-33.2c-8.284 0-15 6.716-15 15v64.267c0 8.284 6.716 15 15 15h33.2V497c0 8.284 6.716 15 15 15h64.267c8.284 0 15-6.716 15-15v-49.267H304.2c8.284 0 15-6.716 15-15v-64.267c0-8.284-6.716-15-15-15h-97.467V319.2zM206.733 94.267h81.4c36.024 0 65.333 29.309 65.333 65.333s-29.309 65.333-65.333 65.333h-81.4z" />
+        </symbol>
+        <symbol id="ruble" viewbox="0 0 512 512">
+            <path
+                d="M191.733 512h-64.267c-8.284 0-15-6.716-15-15v-49.267h-33.2c-8.284 0-15-6.716-15-15v-64.267c0-8.284 6.716-15 15-15h33.2V319.2h-33.2c-8.284 0-15-6.716-15-15v-64.267c0-8.284 6.716-15 15-15h33.2V15c0-8.284 6.716-15 15-15h160.667c88.004 0 159.6 71.596 159.6 159.6 0 88.143-71.308 159.6-159.6 159.6h-81.4v34.267H304.2c8.284 0 15 6.716 15 15v64.267c0 8.284-6.716 15-15 15h-97.467V497c0 8.284-6.715 15-15 15zm-49.266-30h34.267v-49.267c0-8.284 6.716-15 15-15H289.2v-34.267h-97.467c-8.284 0-15-6.716-15-15V304.2c0-8.284 6.716-15 15-15h96.4c71.574 0 129.6-57.905 129.6-129.6 0-71.462-58.138-129.6-129.6-129.6H142.467v209.933c0 8.284-6.716 15-15 15h-33.2V289.2h33.2c8.284 0 15 6.716 15 15v64.267c0 8.284-6.716 15-15 15h-33.2v34.267h33.2c8.284 0 15 6.716 15 15z" />
+            <path
+                d="M288.134 254.933h-96.4c-8.284 0-15-6.716-15-15V79.267c0-8.284 6.716-15 15-15h96.4c52.566 0 95.333 42.767 95.333 95.333s-42.767 95.333-95.333 95.333zm-81.401-30h81.4c36.024 0 65.333-29.308 65.333-65.333s-29.309-65.333-65.333-65.333h-81.4z" />
+        </symbol>
+    </svg>
+
     <header class="main-header" id="main">
+        <h1 class="visually-hidden">Adept - Кофейня в Санкт-Петерубрге</h1>
         <div class="main-header__wrapper">
             <div class="main-header__inner main-header__inner--no-js">
 
@@ -41,7 +55,7 @@
                                 <a class="main-nav__link" href="#main">Главная</a>
                             </li>
                             <li class="main-nav__item main-nav__item--menu">
-                                <a class="main-nav__link" href="">Меню</a>
+                                <a class="main-nav__link" href="#menu">Меню</a>
                             </li>
                             <li class="main-nav__item main-nav__item--about">
                                 <a class="main-nav__link" href="">О&nbsp;нас</a>
@@ -63,8 +77,8 @@
                 </div>
 
                 <section class="main-header__info">
-                    <h1 class="main-header__title">Идеальный
-                        РАФ</h1>
+                    <h2 class="main-header__title">Идеальный
+                        РАФ</h2>
                     <p class="main-header__text">Кофейня для ценителей
                         больших и вкусных рафов, сложных
                         кофейных напитков и необычных
@@ -77,6 +91,149 @@
         </div>
     </header>
 
+    <section class="menu" id="menu">
+        <div class="menu__inner">
+            <h2 class="menu__title">Меню</h2>
+            <ul class="menu-slider">
+                <li class="menu-slider__item menu-item">
+                    <picture>
+                        <img class="menu-item__image menu-item__image--classic" width="100" height="100"
+                            src="images/raff-1@1x.png" srcset="images/raff-1@1x.png 1x, images/raff-1@2x.png 2x"
+                            alt="Иконка с кофе">
+                    </picture>
+                    <h3 class="menu-item__title">Классический
+                        раф</h3>
+                    <p class="menu-item__price">170
+                        <svg class="menu-item__ruble-white" width="19" height="21">
+                            <use xlink:href="#ruble-white"></use>
+                        </svg>
+                        <svg class="menu-item__ruble" width="19" height="21">
+                            <use xlink:href="#ruble"></use>
+                        </svg>
+                    </p>
+                    <div class="menu-item__button">
+                        <input class="menu-item__input visually-hidden" type="checkbox" name="size" id="size-1">
+                        <label class="menu-item__label" for="size-1">
+                            <div class="menu-item__switch" data-checked="M" data-unchecked="L"></div>
+                        </label>
+                    </div>
+                    <p class="menu-item__text">Нежный ванильный
+                        кофейный напиток
+                        на основе эспрессо,
+                        молока и сливок.
+                    </p>
+                </li>
+                <li class="menu-slider__item menu-item">
+                    <picture>
+                        <img class="menu-item__image" width="100" height="100" src="images/raff-2@1x.png"
+                            srcset="images/raff-2@1x.png 1x, images/raff-2@2x.png 2x" alt="Иконка с кофе">
+                    </picture>
+                    <h3 class="menu-item__title">Цитрусовый
+                        раф</h3>
+                    <p class="menu-item__price">220
+                        <svg class="menu-item__ruble-white" width="19" height="21">
+                            <use xlink:href="#ruble-white"></use>
+                        </svg>
+                        <svg class="menu-item__ruble" width="19" height="21">
+                            <use xlink:href="#ruble"></use>
+                        </svg>
+                    </p>
+                    <div class="menu-item__button">
+                        <input class="menu-item__input visually-hidden" type="checkbox" name="size" id="size-2">
+                        <label class="menu-item__label" for="size-2">
+                            <div class="menu-item__switch" data-checked="M" data-unchecked="L"></div>
+                        </label>
+                    </div>
+                    <p class="menu-item__text">Нежный ванильный
+                        кофейный напиток
+                        на основе эспрессо,
+                        молока и сливок.
+                    </p>
+                </li>
+                <li class="menu-slider__item menu-item">
+                    <picture>
+                        <img class="menu-item__image" width="100" height="100" src="images/raff-3@1x.png"
+                            srcset="images/raff-3@1x.png 1x, images/raff-3@2x.png 2x" alt="Иконка с кофе">
+                    </picture>
+                    <h3 class="menu-item__title">Раф
+                        баунти</h3>
+                    <p class="menu-item__price">180
+                        <svg class="menu-item__ruble-white" width="19" height="21">
+                            <use xlink:href="#ruble-white"></use>
+                        </svg>
+                        <svg class="menu-item__ruble" width="19" height="21">
+                            <use xlink:href="#ruble"></use>
+                        </svg>
+                    </p>
+                    <div class="menu-item__button">
+                        <input class="menu-item__input visually-hidden" type="checkbox" name="size" id="size-3">
+                        <label class="menu-item__label" for="size-3">
+                            <div class="menu-item__switch" data-checked="M" data-unchecked="L"></div>
+                        </label>
+                    </div>
+                    <p class="menu-item__text">Нежный ванильный
+                        кофейный напиток
+                        на основе эспрессо,
+                        молока и сливок.
+                    </p>
+                </li>
+                <li class="menu-slider__item menu-item">
+                    <picture>
+                        <img class="menu-item__image" width="100" height="100" src="images/raff-2@1x.png"
+                            srcset="images/raff-2@1x.png 1x, images/raff-2@2x.png 2x" alt="Иконка с кофе">
+                    </picture>
+                    <h3 class="menu-item__title">Цитрусовый
+                        раф</h3>
+                    <p class="menu-item__price">220
+                        <svg class="menu-item__ruble-white" width="19" height="21">
+                            <use xlink:href="#ruble-white"></use>
+                        </svg>
+                        <svg class="menu-item__ruble" width="19" height="21">
+                            <use xlink:href="#ruble"></use>
+                        </svg>
+                    </p>
+                    <div class="menu-item__button">
+                        <input class="menu-item__input visually-hidden" type="checkbox" name="size" id="size-4">
+                        <label class="menu-item__label" for="size-4">
+                            <div class="menu-item__switch" data-checked="M" data-unchecked="L"></div>
+                        </label>
+                    </div>
+                    <p class="menu-item__text">Нежный ванильный
+                        кофейный напиток
+                        на основе эспрессо,
+                        молока и сливок.
+                    </p>
+                </li>
+                <li class="menu-slider__item menu-item">
+                    <picture>
+                        <img class="menu-item__image" width="100" height="100" src="images/raff-3@1x.png"
+                            srcset="images/raff-3@1x.png 1x, images/raff-3@2x.png 2x" alt="Иконка с кофе">
+                    </picture>
+                    <h3 class="menu-item__title">Раф
+                        баунти</h3>
+                    <p class="menu-item__price">180
+                        <svg class="menu-item__ruble-white" width="19" height="21">
+                            <use xlink:href="#ruble-white"></use>
+                        </svg>
+                        <svg class="menu-item__ruble" width="19" height="21">
+                            <use xlink:href="#ruble"></use>
+                        </svg>
+                    </p>
+                    <div class="menu-item__button">
+                        <input class="menu-item__input visually-hidden" type="checkbox" name="size" id="size-5">
+                        <label class="menu-item__label" for="size-5">
+                            <div class="menu-item__switch" data-checked="M" data-unchecked="L"></div>
+                        </label>
+                    </div>
+                    <p class="menu-item__text">Нежный ванильный
+                        кофейный напиток
+                        на основе эспрессо,
+                        молока и сливок.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
 
 
 
@@ -86,10 +243,10 @@
 
 
 
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 
 </html>

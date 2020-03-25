@@ -30,6 +30,7 @@
 $tablet-width: 768px;
 $desktop-width: 1150px;
 $main-blue: #85B1BE;
+$card-color: #071425;
 
 @mixin retina {
     @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
