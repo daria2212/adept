@@ -37,6 +37,13 @@
   margin-bottom: 18px;
 }
 
+.gallery__img {
+  &:hover {
+      transform: scale(1.5);
+      transition: 0.5s;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .gallery {
     background-image: url(../images/gallery-back-big.png);
@@ -64,6 +71,24 @@
     }
     &--coffee {
       order: 1;
+      margin-top: -45px;
+    }
+    &--cookie,
+    &--hall,
+    &--shelf,
+    &--arms {
+      img {
+        width: 150px;
+        height: 110px;
+      }
+    }
+    &--cookie,
+    &--hall {
+      align-self: start;
+    }
+    &--shelf,
+    &--arms {
+      align-self: flex-end;
     }
   }
 }
@@ -104,24 +129,8 @@
         height: 273px;
       }
     }
-  }
-  .gallery__item {
-    &--cookie,
-    &--hall {
-      align-self: start;
-    }
-    &--shelf,
-    &--arms {
-      align-self: flex-end;
-    }
     &--coffee {
       margin-top: -90px;
     }
-  }
-  .gallery__img {
-      &:hover {
-          transform: scale(1.2);
-          transition: 0.3s;
-      }
   }
 }

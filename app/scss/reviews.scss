@@ -158,14 +158,6 @@
     }
   }
 
-  .reviews-item {
-    &:hover {
-      .reviews-item__img {
-        border: 24px solid $main-yellow;
-      }
-    }
-  }
-
   .reviews-item__img {
     margin-bottom: 45px;
     width: 200px;

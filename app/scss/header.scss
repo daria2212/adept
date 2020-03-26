@@ -10,9 +10,15 @@
   background-repeat: no-repeat;
   background-position: 50% 113%;
   background-size: 320px 294px;
+  animation: coffee-mobile 1s;
   &--no-js {
     min-height: 800px;
   }
+}
+
+@keyframes coffee-mobile {
+  from { background-position: 50% 200%;}
+    to { background-position: 50% 113%;}
 }
 
 .top-nav__inner {
@@ -35,6 +41,10 @@
   }
   &--tablet {
     display: none;
+  }
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
   }
 }
 
@@ -67,6 +77,10 @@
   margin: 0 auto;
   &--no-js {
     display: none;
+  }
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
   }
 }
 
@@ -136,6 +150,12 @@
     background-repeat: no-repeat, no-repeat;
     background-position: 0 40%, 100% 140%;
     background-size: contain, auto;
+    animation: coffee 1s;
+  }
+
+  @keyframes coffee {
+    from { background-position: 0% 40%, 100% 1000%;}
+    to { background-position: 0% 40%, 100% 140%;}
   }
 
   .main-header__inner {

@@ -70,6 +70,15 @@
   &:last-child {
     margin-bottom: 0;
   }
+  &:hover {
+    background-color: $card-color;
+    .about-item__title {
+      color: #ffffff;
+    }
+    .about-item__text {
+      color: #ffffff;
+    }
+  }
 }
 
 .about-item__img {
@@ -136,15 +145,6 @@
     margin-bottom: 30px;
     &:last-child {
       margin-bottom: 30px;
-    }
-    &:hover {
-      background-color: $card-color;
-      .about-item__title {
-        color: #ffffff;
-      }
-      .about-item__text {
-        color: #ffffff;
-      }
     }
   }
   .about-item__img {
