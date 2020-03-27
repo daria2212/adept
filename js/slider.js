@@ -13,7 +13,9 @@ $(function () {
                     dotsClass: 'menu-dots',
                     arrows: false,
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    infinite: false,
+                    initialSlide: 1
                 }
             }
         ]
@@ -32,7 +34,9 @@ $(function () {
                     dotsClass: 'menu-dots',
                     arrows: false,
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    infinite: false,
+                    initialSlide: 1
                 }
             }
         ]
