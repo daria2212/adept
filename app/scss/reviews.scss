@@ -35,6 +35,7 @@
   }
   .slick-center {
     transform: scale(1.1);
+    transition: 0.6s;
     .reviews-item__img {
       border: 16px solid $main-yellow;
       box-shadow: 0px 3px 20px rgba(243, 182, 3, 0.6);
