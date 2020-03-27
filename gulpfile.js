@@ -122,7 +122,8 @@ gulp.task('sprite', function () {
     return gulp.src("app/images/icons/*.svg")
         .pipe(svgmin())
         .pipe(svgstore({
-            inlineSvg: true
+            inlineSvg: true,
+            removeViewBox: false
         }))
         .pipe(rename("sprite.svg"))
         .pipe(gulp.dest("app/images/icons"))
