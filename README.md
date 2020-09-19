@@ -1,3 +1,7 @@
-# Adept - coffee house in SPb 
+# ☕  Adept - website layout
 
-https://daria2212.github.io/adept/
+It's a deploy branch
+
+## Open website
+
+[Click here](https://dariathehuman.github.io/adept/)
