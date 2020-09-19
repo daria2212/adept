@@ -50,7 +50,6 @@ $ gulp build
          ├── vars.scss                # For variable definition
          ├── style.scss               # Importing all style files
          ├── -section-.scss           # Styles for each section
-    ├── -page-.html
     └── index.html
     
 ├── .gitignore                        # List of gitignore files
